@@ -1,4 +1,18 @@
-body {
-  background-color: black;
-  color: white;
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --bgDarkColor: #1f1f38;
+  --bgDarkColorVariant: #2c2c6c;
+  --primaryDarkColor: #4db5ff;
+  --primaryDarkColorVariant: rgba(77, 181, 255, 0.4);
+  --whiteColor: #fff;
+  --lightColor: rgba(255, 255, 255, 0.6);
 }
