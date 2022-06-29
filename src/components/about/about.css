@@ -1,0 +1,102 @@
+.about_container {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+}
+
+.about_me {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 32px;
+  background: linear-gradient(45deg, transparent, var(--primaryDarkColor), transparent);
+  display: grid;
+  place-items: center;
+}
+
+.about_me_image {
+  transform: rotate(20deg);
+  transition: var(--transition);
+}
+
+.about_me_image:hover {
+  transform: rotate(0deg);
+}
+
+.about_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.about_card {
+  background: var(--primaryDarkColorVariant);
+  border: 1px solid transparent;
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.about_card:hover {
+  background: transparent;
+  border-color: var(--primaryDarkColorVariant);
+  cursor: default;
+}
+
+.about_icon {
+  color: var(--primaryDarkColor);
+  font-size: 22.4px;
+  margin-bottom: 16px;
+}
+
+.about_card h5 {
+  font-size: 16px;
+}
+
+.about_card small {
+  font-size: 11.2px;
+  color: var(--lightColor);
+}
+
+.about_content p {
+  margin: 32px 0 41.6px;
+  color: var(--lightColor);
+}
+
+@media screen and (max-width: 1024px) {
+  .about_container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .about_me {
+    width: 50%;
+    margin: 32px auto 64px;
+  }
+
+  .about_content p {
+    margin: 16px 0 24px;
+  }
+}
+
+
+/* =============== FOR SMALL DEVICES (PHONES) =============== */
+@media screen and (max-width: 600px) {
+  .about_me {
+    width: 65%;
+    margin-top: 0 auto 48px;
+  }
+
+  .about_cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .about_content {
+    text-align: center;
+  }
+
+  .about_content p {
+    margin: 24px 0;
+  }
+}

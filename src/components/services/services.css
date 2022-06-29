@@ -1,0 +1,73 @@
+.services_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.service {
+  background: var(--darkBgColorVariant);
+  border-radius: 0 0 32px 32px;
+  border: 1px solid var(--primaryDarkColor);
+  height: fit-content;
+  transition: var(--transition);
+}
+
+.service:hover {
+  background: transparent;
+  border-color: var(--primaryDarkColorVariant);
+  cursor: default;
+}
+
+.service_head {
+  background: var(--primaryDarkColor);
+  padding: 32px;
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 32px 16px rgba(0, 0, 0, 0.1);
+}
+
+.service_head h3 {
+  color: var(--darkBgColor);
+  font-size: 16px;
+  text-align: center;
+}
+
+.service_list {
+  padding: 32px;
+}
+
+.service_list p {
+  font-size: 14.4px;
+}
+
+.service_list li {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12.8px;
+  align-items: center;
+}
+
+.service_list_icon {
+  color: var(--primaryDarkColor);
+}
+
+
+/* =============== FOR MEDIUM DEVICES (TABLETS) =============== */
+@media screen and (max-width: 1024px) {
+  .services_container {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .service {
+    height: auto;
+  }
+}
+
+
+/* =============== FOR SMALL DEVICES (PHONES) =============== */
+@media screen and (max-width: 600px) {
+  .services_container {
+    grid-template-columns: 1fr;
+    gap: 25.6px;
+  }
+}
